@@ -1,0 +1,39 @@
+* {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #32A093 0%,
+        #32A093 15%,
+        #DFE0D8 15%,
+        #DFE0D8 100%
+        );
+}   
+/* General */
+.main-app{
+    height: 90%;
+    width: 85%;
+    min-width: 900px;
+    background: #fff;
+}
+
+/* Utility */
+.avatar{
+    border-radius: 50px;
+    width: 45px;
+}
+.bg-header{
+    background-color: #EDEDED;
+}
+.bg-nav{
+    background-color: #A2DFFF;
+}
+
+.notifiche{
+    border-radius: 50px;
+    color: #A2DFFF;
+    background-color: #fff;
+}

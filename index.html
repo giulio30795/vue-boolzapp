@@ -5,15 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/brands.min.css" integrity="sha512-lCU0XyQA8yobR7ychVxEOU5rcxs0+aYh/9gNDLaybsgW9hdrtqczjfKVNIS5doY0Y5627/+3UVuoGv7p8QsUFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' integrity='sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==' crossorigin='anonymous'/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body class="d-flex justify-content-center align-items-center">
-    <div id="app" class="main-app">
+    <div class="main-app">
+        <div id="app" class="container-fluid">
+            <div class="row">
+                <aside class="col-12">
+                    <div class="row">
+                        <div class="col-4 g-0 border-end">
+                            <!-- Sidebar - Contatti -->
+                            <header class="bg-header p-2 d-flex justify-content-between">
+                                <div>
+                                    <img class="avatar" src="./img/avatar_io.jpg" alt="">
+                                    <span>Nome Utente</span>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-circle-notch opacity-25"></i>
+                                    <i class="fas fa-comment-alt mx-3 opacity-25"></i>
+                                    <i class="fas fa-ellipsis-v opacity-25"></i>
+                                </div>
+                            </header>
+                            <!-- Notifiche -->
+                            <nav class="bg-nav d-flex align-items-center p-2">
+                                <div class="notifiche p-2 m-1">
+                                    <i class="fas fa-bell-slash fs-5 notifiche"></i>
+                                </div>
+                                <div>
+                                    <div class="">Ricevi Notifiche di nuovi messaggi</div>
+                                    <a class="text-secondary" href="#">Attiva Notifiche di stato desktop</a>
+                                </div>
+                                
+                            </nav>
+                            <!-- Barra Ricerca -->
+                            
+                        </div>
+                        <div class="col-8 bg-header">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident aut sint libero voluptates, illo odio tempore nobis vel laborum facere laudantium animi in tempora cupiditate perspiciatis distinctio assumenda fugit! Optio!</div>
+                    </div>
+                </aside>
+            </div>
+        </div>
     </div>
     <!-- Javascript -->
     <script src="script.js"></script>
