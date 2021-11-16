@@ -16,10 +16,10 @@
 <body class="d-flex justify-content-center align-items-center">
         <div id="app" class="container-fluid main-app">
             <div class="row h-100">
-                <aside class="col-12">
+                <aside class="col-12 h-100">
                     <div class="row h-100"> 
                         <!-- Parte Sinistra -->
-                        <div class="col-4 g-0 border-end d-flex flex-column">
+                        <div class="col-4 g-0 border-end d-flex flex-column h-100 overflow-auto">
                             <!-- Sidebar - Contatti -->
                             <header class="bg-header p-2 d-flex justify-content-between">
                                 <div>
@@ -54,8 +54,8 @@
                                 </form>
                             </nav>
                             <!-- Contatti -->
-                            <section class="contatti flex-grow-1">
-                                <ul class="p-0">
+                            <section class="contatti overflow-auto flex-grow-1">
+                                <ul class="list-unstyled">
                                     <li v-for="contact in contacts"class="d-flex align-items-center">
                                         <img class="avatar-chat mx-3 my-2" :src="`img/avatar${contact.avatar}.jpg`" alt="img">
                                         <div class="ms-2">{{contact.name}}</div>
