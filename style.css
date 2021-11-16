@@ -40,6 +40,7 @@ body {
 .bg-header{
     background-color: #EDEDED;
 }
+
 .bg-nav{
     background-color: #A2DFFF;
 }
@@ -54,6 +55,10 @@ body {
     background-color: #fff;
 }
 
+.cursor-pointer{
+cursor: pointer;
+}
+
 /* Sezione Contatti */
 .contatti ul li{
     border-bottom: 1px solid rgb(223, 222, 222);
@@ -61,6 +66,11 @@ body {
 
 .contatti ul li:last-child{
     border-bottom: 0;
+}
+
+.contatti ul li:hover{
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
 }
 
 /* Sezione Chat */
