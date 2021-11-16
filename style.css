@@ -21,6 +21,12 @@ body {
 }
 
 /* Utility */
+.fs-13{
+    font-size: 13px;
+}
+.fs-10{
+    font-size: 10px;
+}
 .avatar{
     border-radius: 50px;
     width: 45px;
@@ -55,4 +61,23 @@ body {
 
 .contatti ul li:last-child{
     border-bottom: 0;
+}
+
+/* Sezione Chat */
+
+.chat{
+    background-image:url('./img/mine.jpg');
+}
+
+.messaggio-ricevuto,
+.messaggio-inviato{
+    border-radius: 10px;
+}
+
+.messaggio-inviato{
+     background-color:#DDFABE;
+}
+
+.messaggio-ricevuto{
+    background-color: #fff;
 }
