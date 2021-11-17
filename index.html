@@ -73,9 +73,9 @@
                             <!-- Header -->
                             <header class="bg-header px-3 py-2 d-flex justify-content-between">
                                 <div class="d-flex">
-                                    <img class="avatar" src="./img/avatar_1.jpg" alt="">
+                                    <img class="avatar" :src="`./img/avatar${contacts[activeIndex].avatar}.jpg`" alt="">
                                     <div class="ms-2">
-                                        <span>Michele <br></span>
+                                        <span>{{contacts[activeIndex].name}} <br></span>
                                         <span class="fs-13 text-secondary">Ultimo Accesso oggi alle 10:35</span>
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@
                                 </div>
                             </header>
                             <!-- Chat -->
-                            <main class="flex-grow-1 chat p-5 d-flex flex-column">
+                            <main class="flex-grow-1 chat p-5 d-flex flex-column overflow-auto">
                                 <div
                                     v-for="(element, index) in contacts[activeIndex].messages"
                                     class="col-4 pt-3 ps-3 pe-2 mb-3"
@@ -116,8 +116,6 @@
                                 <div class="col-1 p-2 text-center">
                                     <i class="fas fa-microphone fs-4"></i>
                                 </div>
-
-
                             </section>
                         </div>
                     </div>
@@ -125,6 +123,8 @@
             </div>
     </div>
     <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/plugin/relativeTime.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,8 +1,3 @@
-// Milestone 1
-// Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse.
-// Le icone non hanno funzionalità ma sono solo presentazionali.
-
-// Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
 
 // La struttura dei dati:
 const app = new Vue ({
@@ -103,13 +98,16 @@ const app = new Vue ({
     },
 
     methods: {
+        // Aggiornamento data e ora del messaggio 
         genDate(){
             const today = dayjs();
             this.timeNow = today.format('DD/MM/YY hh:mm:ss')
         },
+        // indice della chat attiva
         changeIndex(index){
             this.activeIndex = index
         },
+        // Invio Messaggio Con creazione Risposta
         newMessage(){
                 this.genDate()
             if (!this.messageText == ''){
