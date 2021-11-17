@@ -123,11 +123,11 @@ const app = new Vue ({
                     this.genDate();
                     this.risposta = {
                         date: this.timeNow,
-                        text: 'va bene',
+                        text: 'Ok',
                         status: 'received',
                     },
                     this.contacts[this.activeIndex].messages.push(this.risposta)
-                    },2000)
+                    },1000)
             }
         },
     },
