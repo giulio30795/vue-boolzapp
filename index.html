@@ -87,23 +87,17 @@
                             </header>
                             <!-- Chat -->
                             <main class="flex-grow-1 chat p-5 d-flex flex-column">
-                                <div 
+                                <div
                                     v-for="(element, index) in contacts[activeIndex].messages"
-
                                     class="col-4 pt-3 ps-3 pe-2 mb-3"
                                     :class="{messaggioInviato : element.status === 'sent',
                                             messaggioRicevuto : element.status === 'received'
-                                            }" 
+                                            }"
                                     >
                                     {{element.text}}
                                     <div class="text-end fs-10 text-secondary">{{element.date}}
                                     </div>
                                 </div>
-
-                                <!-- <div v-else class="col-4 offset-1 pt-3 ps-3 pe-2 mb-3 messaggio-ricevuto">{{message.text}}
-                                    <div class="text-end fs-10 text-secondary">{{message.date}}
-                                    </div>
-                                </div> -->
                             </main>
                             <!-- Invio messaggio chat -->
                             <section class="row justify-content-center g-0 py-2">
@@ -111,7 +105,13 @@
                                     <i class="far fa-smile fs-4"></i>
                                 </div>
                                 <div class="col-10">
-                                    <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                                    <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    placeholder="Scrivi un messaggio"
+                                    v-model.trim="messageText"
+                                    @keyup.enter="newMessage"
+                                    >
                                 </div>
                                 <div class="col-1 p-2 text-center">
                                     <i class="fas fa-microphone fs-4"></i>

@@ -79,15 +79,17 @@ cursor: pointer;
     background-image:url('./img/mine.jpg');
 }
 
-.messaggio-ricevuto,
-.messaggio-inviato{
+.messaggioRicevuto,
+.messaggioInviato{
     border-radius: 10px;
 }
 
-.messaggio-inviato{
+.messaggioInviato{
      background-color:#DDFABE;
+     align-self: flex-end;
 }
 
-.messaggio-ricevuto{
+.messaggioRicevuto{
     background-color: #fff;
 }
+

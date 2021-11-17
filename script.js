@@ -91,7 +91,35 @@ const app = new Vue ({
                     }
                 ],
             },
-        ]
-        
+        ],
+
+        activeIndex: 0,
+        messageText: ''
+
+    },
+    methods: {
+        changeIndex(index){
+            this.activeIndex = index
+        },
+        newMessage(){
+            if (!this.messageText == ''){
+                this.messaggio = {
+                    date: 'ora',
+                    text: this.messageText,
+                    status: 'sent',
+                }
+                this.contacts[this.activeIndex].messages.push(this.messaggio);
+                this.messageText = ''
+
+                setTimeout(
+                    this.risposta = {
+                    date: 'ora',
+                    text: 'va bene',
+                    status: 'received',
+                },
+                this.contacts[this.activeIndex].messages.push(this.risposta),
+                2000)
+            }
+        },
     },
 })
