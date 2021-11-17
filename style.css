@@ -20,6 +20,10 @@ body {
     background: #fff;
 }
 
+i {
+    cursor: pointer;
+}
+
 /* Utility */
 .fs-13{
     font-size: 13px;
