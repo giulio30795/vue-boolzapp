@@ -94,31 +94,42 @@ const app = new Vue ({
         ],
 
         activeIndex: 0,
-        messageText: ''
-
+        messageText: '',
+        timeNow:'',
     },
+
+    created(){
+        dayjs.extend(dayjs_plugin_relativeTime);
+    },
+
     methods: {
+        genDate(){
+            const today = dayjs();
+            this.timeNow = today.format('DD/MM/YY hh:mm:ss')
+        },
         changeIndex(index){
             this.activeIndex = index
         },
         newMessage(){
+                this.genDate()
             if (!this.messageText == ''){
                 this.messaggio = {
-                    date: 'ora',
+                    date: this.timeNow,
                     text: this.messageText,
                     status: 'sent',
                 }
                 this.contacts[this.activeIndex].messages.push(this.messaggio);
                 this.messageText = ''
 
-                setTimeout(
+                setTimeout( () => {
+                    this.genDate();
                     this.risposta = {
-                    date: 'ora',
-                    text: 'va bene',
-                    status: 'received',
-                },
-                this.contacts[this.activeIndex].messages.push(this.risposta),
-                2000)
+                        date: this.timeNow,
+                        text: 'va bene',
+                        status: 'received',
+                    },
+                    this.contacts[this.activeIndex].messages.push(this.risposta)
+                    },2000)
             }
         },
     },
