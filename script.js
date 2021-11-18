@@ -92,6 +92,7 @@ const app = new Vue ({
         messageText: '',
         timeNow:'',
         search: '',
+        indicechat: -1,
     },
 
     created(){
@@ -106,7 +107,8 @@ const app = new Vue ({
         },
         // indice della chat attiva
         changeIndex(index){
-            this.activeIndex = index
+            this.activeIndex = index;
+            this.indicechat = ''
         },
         // Invio Messaggio Con creazione Risposta
         newMessage(){
@@ -142,6 +144,14 @@ const app = new Vue ({
             console.log(element.visible);
            })
 
-        }
+        },
+
+        toggleDisplay(index){
+            if(this.indicechat === index){
+                this.indicechat = -1;
+            } else {
+                this.indicechat = index
+            }
+        },
     },
 })

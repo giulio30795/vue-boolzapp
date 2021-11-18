@@ -28,6 +28,9 @@ i {
 .dNone{
     display: none;
 }
+.dBlock{
+    display: block;
+}
 .fs-13{
     font-size: 13px;
 }
@@ -102,3 +105,16 @@ cursor: pointer;
     background-color: #fff;
 }
 
+.messageMenu{
+    background-color: #fff;
+    border-radius: 5px;
+}
+.positionMenu{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+i.positionMenu{
+    text-align: end;
+}

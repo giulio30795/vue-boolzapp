@@ -99,20 +99,32 @@
                                 </div>
                             </header>
                             <!-- Chat -->
-                            <main class="flex-grow-1 chat p-5 d-flex flex-column overflow-auto">
-                                <div
+                            <main 
+                                class="flex-grow-1 chat p-5 d-flex flex-column overflow-auto">
+                                    <div
                                     v-for="(element, index) in contacts[activeIndex].messages"
-                                    class="col-4 pt-3 ps-3 pe-2 mb-3"
+                                    class="col-4 pt-3 ps-3 pe-2 mb-3 d-flex flex-column position-relative"
                                     :class=
                                         "{messaggioInviato : element.status === 'sent',
                                         messaggioRicevuto : element.status === 'received'
                                         }"
-                                    >
+                                        >
                                         {{element.text}}
+                                    <i 
+                                        class="fas fa-chevron-down positionMenu"
+                                        @click="toggleDisplay(index)"
+                                        >
+                                        <div 
+                                        class="messageMenu p-2"
+                                            v-show="indicechat === index"
+                                        >
+                                            <div class="text-start">Cancella Messaggio</div>
+                                            <div class="text-start pt-2">Info Messaggio</div>
+                                        </div>
+                                    </i>
                                     <div class="text-end fs-10 text-secondary">
                                         {{element.date}}
                                     </div>
-                                </div>
                             </main>
                             <!-- Invio messaggio chat -->
                             <section class="row justify-content-center g-0 py-2">
