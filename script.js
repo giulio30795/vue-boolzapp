@@ -153,5 +153,6 @@ const app = new Vue ({
                 this.indicechat = index
             }
         },
+
     },
 })

@@ -110,16 +110,16 @@
                                         }"
                                         >
                                         {{element.text}}
-                                    <i 
-                                        class="fas fa-chevron-down positionMenu"
-                                        @click="toggleDisplay(index)"
-                                        >
+                                        <i 
+                                            class="fas fa-chevron-down positionMenu"
+                                            @click="toggleDisplay(index)"
+                                            >
                                         <div 
-                                        class="messageMenu p-2"
+                                            class="messageMenu"
                                             v-show="indicechat === index"
-                                        >
-                                            <div class="text-start">Cancella Messaggio</div>
-                                            <div class="text-start pt-2">Info Messaggio</div>
+                                            >
+                                            <div class="text-start p-2">Cancella Messaggio</div>
+                                            <div class="text-start p-2">Info Messaggio</div>
                                         </div>
                                     </i>
                                     <div class="text-end fs-10 text-secondary">
