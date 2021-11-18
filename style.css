@@ -79,7 +79,9 @@ cursor: pointer;
     cursor: pointer;
     background-color: rgb(235, 235, 235);
 }
-
+.active{
+    background-color: rgb(235, 235, 235);
+}
 /* Sezione Chat */
 
 .chat{

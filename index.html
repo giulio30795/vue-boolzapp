@@ -64,15 +64,17 @@
                             <section class="contatti overflow-auto flex-grow-1">
                                 <ul class="list-unstyled">
                                     <li
-                                        v-for="(contact, index) in contacts"
-                                        @click="changeIndex(index)"
-                                        class="d-flex align-items-center"
-                                        v-if="contact.visible === true"
-                                        
+                                    v-for="(contact, index) in contacts"
+                                    @click="changeIndex(index)"
+                                    class="d-flex align-items-center"
+                                    :class="{active: index === activeIndex}"
+                                    v-if="contact.visible === true"
                                     >
-                                        <img class="avatar-chat mx-3 my-2" 
+                                        <img 
+                                        class="avatar-chat mx-3 my-2" 
                                         :src="`img/avatar${contact.avatar}.jpg`" 
-                                        alt="avatar">
+                                        alt="avatar"
+                                        >
                                         <div class="ms-2">{{contact.name}}</div>
                                     </li>
                                 </ul>
@@ -119,7 +121,7 @@
                                 </div>
                                 <div class="col-10">
                                     <input 
-                                    type="text" 
+                                    type="text"
                                     class="form-control" 
                                     placeholder="Scrivi un messaggio"
                                     v-model.trim="messageText"
