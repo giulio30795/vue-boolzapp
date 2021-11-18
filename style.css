@@ -25,6 +25,9 @@ i {
 }
 
 /* Utility */
+.dNone{
+    display: none;
+}
 .fs-13{
     font-size: 13px;
 }

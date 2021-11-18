@@ -91,6 +91,7 @@ const app = new Vue ({
         activeIndex: 0,
         messageText: '',
         timeNow:'',
+        search: '',
     },
 
     created(){
@@ -130,5 +131,17 @@ const app = new Vue ({
                     },1000)
             }
         },
+
+        filterContact(){
+           this.contacts.forEach(element => {
+            if(!element.name.toLowerCase().includes(this.search.toLowerCase())){
+                element.visible = false
+            } else {
+                element.visible = true
+            }
+            console.log(element.visible);
+           })
+
+        }
     },
 })
