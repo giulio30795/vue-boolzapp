@@ -153,6 +153,10 @@ const app = new Vue ({
                 this.indicechat = index
             }
         },
-
+        
+        cxlMessage(index){
+            this.contacts[this.activeIndex
+            ].messages.splice(index,1)
+        }
     },
 })

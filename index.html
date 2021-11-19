@@ -112,13 +112,15 @@
                                         {{element.text}}
                                         <i 
                                             class="fas fa-chevron-down positionMenu"
-                                            @click="toggleDisplay(index)"
+                                            @click="toggleDisplay(index) "
                                             >
                                         <div 
                                             class="messageMenu"
                                             v-show="indicechat === index"
                                             >
-                                            <div class="text-start p-2">Cancella Messaggio</div>
+                                            <div 
+                                            @click="cxlMessage(index)"
+                                            class="text-start p-2">Cancella Messaggio</div>
                                             <div class="text-start p-2">Info Messaggio</div>
                                         </div>
                                     </i>
@@ -149,6 +151,7 @@
                 </aside>
             </div>
     </div>
+    
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/plugin/relativeTime.js"></script>
