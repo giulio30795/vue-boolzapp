@@ -97,6 +97,7 @@ const app = new Vue ({
 
     created(){
         dayjs.extend(dayjs_plugin_relativeTime);
+        console.log(this.indicePreview)
     },
 
     methods: {
@@ -156,7 +157,7 @@ const app = new Vue ({
         
         cxlMessage(index){
             this.contacts[this.activeIndex
-            ].messages.splice(index,1)
+            ].messages.splice(index,1);
         }
     },
 })
